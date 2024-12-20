@@ -59,10 +59,10 @@ A abordagem **Micro-Batch** foi selecionada pelos seguintes motivos:
 - O agendamento do processo de Micro-Batch pode ser configurado utilizando ferramentas como o cron no Linux ou o Task Scheduler no Windows. A seguir, demonstraremos a configuração de um cron job no Linux para executar o processo automaticamente a cada hora:
 
 Abra o editor de agendamentos do cron executando o comando no terminal:
-<crontab -e>
+`crontab -e`
 
 Inclua a seguinte linha no arquivo de configuração:
-<0 * * * * /caminho/para/o/script.sh >> /caminho/para/o/log.log 2>&1>
+`0 * * * * /caminho/para/o/script.sh >> /caminho/para/o/log.log 2>&1`
 
 ### Incremento dos Dados
 - Consultas SQL incrementais serão utilizadas para processar apenas os dados novos desde a última execução, otimizando o desempenho e reduzindo o uso de recursos.
